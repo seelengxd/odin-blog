@@ -11,9 +11,12 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2021_12_10_053103) do
+<<<<<<< HEAD
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+=======
+>>>>>>> 3074f469fa6358f5a7e47be039db54e77eff886c
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -25,7 +28,11 @@ ActiveRecord::Schema.define(version: 2021_12_10_053103) do
   create_table "comments", force: :cascade do |t|
     t.string "commenter"
     t.text "body"
+<<<<<<< HEAD
     t.bigint "article_id", null: false
+=======
+    t.integer "article_id", null: false
+>>>>>>> 3074f469fa6358f5a7e47be039db54e77eff886c
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["article_id"], name: "index_comments_on_article_id"
